@@ -1,0 +1,40 @@
+{
+    "cards": [
+        {
+            "name": "Queen of Wands",
+            "arcana": "Minor",
+            "suit": "Wands",
+            "description": "Fun, playful, warm, caring, encouraging."
+        },
+        {
+            "name": "Knight of Pentacles",
+            "arcana": "Minor",
+            "suit": "Pentacles",
+            "description": "Putting down roots. Being careful."
+        },
+        {
+            "name": "2. The High Priestess",
+            "arcana": "Major",
+            "suit": null,
+            "description": "Inner wisdom. Becoming enlightened from within."
+        },
+        {
+            "name": "2. The Lovers",
+            "arcana": "Major",
+            "suit": null,
+            "description": "Union, harmony. Merging of two."
+        },
+        {
+            "name": "Three of Swords",
+            "arcana": "Minor",
+            "suit": "Swords",
+            "description": "Romantic heartbreak. Betrayal. Scars. "
+        },
+        {
+            "name": "13. Death",
+            "arcana": "Major",
+            "suit": null,
+            "description": "Change. Rebirth. An ending brings a new beginning."
+        }
+    ]
+}
