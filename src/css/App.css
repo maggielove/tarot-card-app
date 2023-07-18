@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #000;
 }
 
 .App-link {
@@ -16,18 +16,4 @@
 .cards-wrapper {
     display: flex;
     flex-direction: row;
-}
-
-.button-wrapper {
-    margin-top: 50px;
-}
-
-button {
-    height: 50px;
-    width: 100px;
-    align-self: flex-end;
-}
-
-button:hover {
-    cursor: pointer;
 }

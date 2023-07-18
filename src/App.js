@@ -18,20 +18,14 @@ const getRandomIndex = () => {
 
 // TODO add logic to clear, reset deck
 // randomly select card content to display
-const selectCards = () => {
+const pickACard = () => {
     let randomIndex = getRandomIndex();
     let chosenCard = cardArray[randomIndex];
-
-    spread.push(chosenCard);
 
     // remove the chosenCard from the virtual deck
     cardArray = cardArray.filter(card => card.name !== chosenCard.name);
 
-    if (spread.length < 3) {
-        selectCards();
-    }
-
-    return spread;
+    return chosenCard;
 }
 
 export default class App extends React.Component {
@@ -39,33 +33,32 @@ export default class App extends React.Component {
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.state = {
-            spread: null,
-            buttonText: `read me`
+            spread: null
         }
     }
 
     handleClick() {
-      this.setState({
-          spread: selectCards(),
-          buttonText: `new reading`
-      });
+      console.log('clicked');
     }
 
     renderCards() {
         const { spread } = this.state;
-        return spread.map(card => <Card
-            key={spread.indexOf(card).toString()}
-            data={card} />);
+        let cardsToDisplay = [];
+
+        // render 3 cards
+        // TODO change cardsToDisplay to readingCards
+        for (var i = 0; i < 3; i++) {
+            cardsToDisplay.push(<Card key={i.toString()} data={pickACard()} />);
+        }
+
+        return cardsToDisplay;
     }
 
     render() {
       return (
         <div className="App">
             <div className="cards-wrapper">
-                {this.state.spread && this.renderCards()}
-            </div>
-            <div className="button-wrapper">
-                <button onClick={this.handleClick}>{this.state.buttonText}</button>
+                {this.renderCards()}
             </div>
         </div>
       );

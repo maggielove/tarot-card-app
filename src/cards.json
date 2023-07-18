@@ -1,40 +1,72 @@
 {
     "cards": [
         {
-            "name": "Queen of Wands",
-            "arcana": "Minor",
-            "suit": "Wands",
-            "description": "Fun, playful, warm, caring, encouraging."
+          "name": "IV of Cups",
+          "arcana": "Minor",
+          "suit": "Cups",
+          "description": "",
+          "image": "./images/4-of-cups.png"
         },
         {
-            "name": "Knight of Pentacles",
-            "arcana": "Minor",
-            "suit": "Pentacles",
-            "description": "Putting down roots. Being careful."
+          "name": "VI of Swords",
+          "arcana": "Minor",
+          "suit": "Swords",
+          "description": "",
+          "image": "./images/6-of-swords.png"
         },
         {
-            "name": "2. The High Priestess",
+          "name": "VI of Swords",
+          "arcana": "Minor",
+          "suit": "Swords",
+          "description": "",
+          "image": "./images/6-of-swords.png"
+        },
+        {
+          "name": "III of Cups",
+          "arcana": "Minor",
+          "suit": "Cups",
+          "description": "",
+          "image": "./images/3-of-cups.png"
+        },
+        {
+          "name": "VII of Cups",
+          "arcana": "Minor",
+          "suit": "Cups",
+          "description": "",
+          "image": "./images/7-of-cups.png"
+        },
+        {
+          "name": "Moon",
+          "arcana": "Major",
+          "description": "",
+          "image": "./images/moon.png"
+        },
+        {
+          "name": "Strength",
+          "arcana": "Major",
+          "description": "",
+          "image": "./images/strength.png"
+        },
+        {
+            "name": "The High Priestess",
             "arcana": "Major",
             "suit": null,
-            "description": "Inner wisdom. Becoming enlightened from within."
+            "description": "Inner wisdom. Becoming enlightened from within.",
+            "image": "./images/high-priestess.png"
         },
         {
-            "name": "2. The Lovers",
+            "name": "The Lovers",
             "arcana": "Major",
             "suit": null,
-            "description": "Union, harmony. Merging of two."
+            "description": "Union, harmony. Merging of two.",
+            "images": "./images/lovers.png"
         },
         {
-            "name": "Three of Swords",
-            "arcana": "Minor",
-            "suit": "Swords",
-            "description": "Romantic heartbreak. Betrayal. Scars. "
-        },
-        {
-            "name": "13. Death",
+            "name": "Death",
             "arcana": "Major",
             "suit": null,
-            "description": "Change. Rebirth. An ending brings a new beginning."
+            "description": "Change. Rebirth. An ending brings a new beginning.",
+            "image": "./images/death.png"
         }
     ]
 }
