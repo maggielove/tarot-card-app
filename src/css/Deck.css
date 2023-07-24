@@ -1,0 +1,30 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap");
+
+.deck-wrapper {
+  flex-direction: column;
+  max-width: 500px;
+  padding-top: 32px;
+}
+
+.welcome-text {
+  font-family: 'Lumanosimo', cursive;
+  color: #f2f2f2;
+}
+
+.welcome-text:hover {
+  cursor: pointer;
+}
+
+p {
+  font-size: 24px;
+  margin: 24px auto 0 auto;
+}
+
+/* tablet and below */
+@media only screen
+and (max-width: 768px) {
+    p {
+      font-size: 18px;
+    }
+}

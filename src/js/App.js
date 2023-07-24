@@ -1,7 +1,8 @@
 import React from 'react';
-import './css/App.css';
+import '../css/App.css';
 import Card from './Card.js';
-import * as deck from './cards';
+import Deck from './Deck.js'
+import * as deck from './cards.json';
 
 const allCards = deck;
 let cardArray;
@@ -32,16 +33,28 @@ export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
+        this.toggleReadingProgress = this.toggleReadingProgress.bind(this);
         this.state = {
+            readingInProgress: false,
             spread: null
         }
+    }
+
+    toggleReadingProgress() {
+      this.setState({
+        readingInProgress: true
+      })
     }
 
     handleClick() {
       console.log('clicked');
     }
 
-    renderCards() {
+    renderDeck() {
+      return <Deck onRotate={this.toggleReadingProgress} />
+    }
+
+    renderSpread() {
         const { spread } = this.state;
         let cardsToDisplay = [];
 
@@ -55,10 +68,12 @@ export default class App extends React.Component {
     }
 
     render() {
+      const { readingInProgress } = this.state;
+
       return (
         <div className="App">
             <div className="cards-wrapper">
-                {this.renderCards()}
+              {readingInProgress ? this.renderSpread() : this.renderDeck()}
             </div>
         </div>
       );

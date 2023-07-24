@@ -1,3 +1,5 @@
+/* Desktop */
+
 .App {
   text-align: center;
   background-color: #282c34;
@@ -16,4 +18,17 @@
 .cards-wrapper {
     display: flex;
     flex-direction: row;
+    max-width: 100%;
+}
+
+/* tablet and below */
+@media only screen
+and (max-width: 768px) {
+    .cards-wrapper {
+      flex-direction: column;
+    }
+
+    .App {
+      padding: 32px 0;
+    }
 }

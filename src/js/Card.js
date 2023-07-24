@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import './css/Card.css';
+import '../css/Card.css';
 
 // TODO choose clear... card...
 export default class Card extends React.Component {
@@ -14,7 +14,6 @@ export default class Card extends React.Component {
     }
 
     handleClick() {
-        console.log('card clicked');
         this.setState({
             flipped: true
         });
@@ -28,12 +27,12 @@ export default class Card extends React.Component {
             <div className={cardClass} onClick={this.handleClick}>
                 <div className='card-inner'>
                     <div className='card-front'>
-                      <img src={require('./images/card-top-view.png')}
+                      <img src={require('../images/card-top-view.png')}
                     alt={data.name} height={362} width={200} />
                     </div>
                     <div className='card-back'>
                         {data &&
-                          <img src={require(`${data.image}`)}
+                          <img src={require(`../${data.image}`)}
                           alt={data.name} height={362} width={200} />
                         }
                     </div>
