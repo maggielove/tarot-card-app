@@ -1,3 +1,6 @@
+/*Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap");
+
 /* Desktop */
 .card {
     display: flex;
@@ -10,20 +13,6 @@
 
 .card:hover {
     cursor: pointer;
-}
-
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    /* padding: 15px; */
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.card.flipped .card-inner {
-    transform: rotateY(180deg);
 }
 
 .card-front, .card-back {
@@ -41,18 +30,51 @@
 .card-back {
     /* background-color: white; */
     transform: rotateY(180deg);
+    z-index: 0;
 }
 
 .card:nth-child(2) {
     margin: 0 50px;
 }
 
-h1 {
-    font-size: 24px;
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* padding: 15px; */
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
-p {
-    font-size: 18px;
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.description.hidden {
+  opacity: 0;
+}
+
+.description {
+  opacity: 1;
+  background-color: rgb(242, 242, 242, 0.95);
+  position: absolute;
+  z-index: 1;
+  padding: 8px;
+  width: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.description > p {
+  font-family: 'Lumanosimo', cursive;
+  font-size: 14px;
+  margin-top: 8px;
 }
 
 /* tablet and below */

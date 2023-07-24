@@ -4,7 +4,7 @@
           "name": "IV of Cups",
           "arcana": "Minor",
           "suit": "Cups",
-          "description": "",
+          "description": "Lorem ipsum",
           "image": "images/4-of-cups.png"
         },
         {
@@ -18,26 +18,26 @@
           "name": "III of Cups",
           "arcana": "Minor",
           "suit": "Cups",
-          "description": "",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
           "image": "images/3-of-cups.png"
         },
         {
           "name": "VII of Cups",
           "arcana": "Minor",
           "suit": "Cups",
-          "description": "",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
           "image": "images/7-of-cups.png"
         },
         {
           "name": "Moon",
           "arcana": "Major",
-          "description": "",
-          "image": "../images/moon.png"
+          "description": "Inner wisdom. Becoming enlightened from within.",
+          "image": "images/moon.png"
         },
         {
           "name": "Strength",
           "arcana": "Major",
-          "description": "",
+          "description": "Inner wisdom. Becoming enlightened from within.",
           "image": "images/strength.png"
         },
         {
