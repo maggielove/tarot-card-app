@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;
-  background-color: #282c34;
+  background: linear-gradient(330deg, rgba(72,26,128,1) 0%, rgba(128,26,124,1) 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

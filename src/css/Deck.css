@@ -7,9 +7,20 @@
   padding-top: 32px;
 }
 
+.deck {
+  /* animation: rotateY 2s 1s; */
+  transform: rotate(45deg);
+  /* transform: rotateX(45deg); */
+}
+
 .welcome-text {
   font-family: 'Lumanosimo', cursive;
   color: #f2f2f2;
+  margin: 24px auto 0 auto;
+  display: block;
+  position: absolute;
+  width: 500px;
+  height: 100px;
 }
 
 .welcome-text:hover {
@@ -18,7 +29,6 @@
 
 p {
   font-size: 24px;
-  margin: 24px auto 0 auto;
 }
 
 /* tablet and below */
@@ -31,4 +41,16 @@ and (max-width: 768px) {
     img {
       max-width: 100%;
     }
+}
+
+@keyframes rotateY {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotateX(45deg);
+  }
 }
