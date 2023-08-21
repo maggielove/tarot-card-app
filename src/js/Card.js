@@ -15,8 +15,10 @@ export default class Card extends React.Component {
             descriptionHidden: true
         }
     }
-
+    //TODO change this.state logic to useState
     handleClick() {
+      console.log('clicked card');
+
         this.setState({
             flipped: true
         });

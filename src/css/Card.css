@@ -1,16 +1,22 @@
 /*Google Font */
-@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-/* Desktop */
 .card {
-    display: flex;
-    background-color: transparent;
-    height: 370px;
-    width: 200px;
-    /* padding: 16px; */
-    perspective: 1000px;
+  display: flex;
+  background-color: transparent;
+  height: 370px;
+  width: 200px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  /* padding: 16px; */
+  perspective: 1000px;
+  background-size: cover;
+  background-image: url("../images/card-top-view.png");
+  transition: all 0.4s cubic-bezier(.63,.15,.03,1.12);
 }
 
+/* Desktop */
 .card:hover {
     cursor: pointer;
 }
@@ -33,9 +39,9 @@
     z-index: 0;
 }
 
-.card:nth-child(2) {
+/* .card:nth-child(2) {
     margin: 0 50px;
-}
+} */
 
 .card-inner {
     position: relative;
@@ -72,7 +78,7 @@
 }
 
 .description > p {
-  font-family: 'Lumanosimo', cursive;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   margin-top: 8px;
 }

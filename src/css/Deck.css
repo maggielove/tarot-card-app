@@ -1,30 +1,83 @@
 /* Google Font */
-@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .deck-wrapper {
   flex-direction: column;
-  max-width: 500px;
   padding-top: 32px;
 }
 
-.deck {
-  /* animation: rotateY 2s 1s; */
-  transform: rotate(45deg);
-  /* transform: rotateX(45deg); */
+.cards {
+  /* border: 1px solid white; */
+  position: relative;
+  width: 650px;
+  margin: 0 auto;
+  height: 370px;
+  cursor: pointer;
+}
+
+.cards.mobile {
+  display: none;
+}
+
+/* .card {
+  display: flex;
+  background-color: transparent;
+  height: 370px;
+  width: 200px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  perspective: 1000px;
+  background-size: cover;
+  background-image: url("../images/card-top-view.png");
+  transition: all 0.4s cubic-bezier(.63,.15,.03,1.12);
+} */
+
+.card-1 {
+  z-index: 3;
+  transform: rotateZ(-2deg);
+}
+
+.card-2 {
+  z-index: 2;
+  transform: rotateZ(-7deg);
+}
+
+.card-3 {
+  z-index: 1;
+  transform: rotateZ(5deg);
+}
+
+/* TODO change to SCSS, nest */
+/* Animation based on https://codepen.io/chrishutchinson/pen/qBrBjG */
+.cards.spread .card {
+  transform: rotateZ(0deg);
+}
+
+.cards.spread .card-1{
+  left: 440px;
+}
+
+.cards.spread .card-2{
+  left: 220px;
 }
 
 .welcome-text {
-  font-family: 'Lumanosimo', cursive;
+  font-family: 'Roboto', Arial, sans-serif;
   color: #f2f2f2;
-  margin: 24px auto 0 auto;
+  margin: 48px auto 0 auto;
   display: block;
   position: absolute;
-  width: 500px;
+  width: 650px;
   height: 100px;
 }
 
 .welcome-text:hover {
   cursor: pointer;
+}
+
+.welcome-text.spread {
+  display: none;
 }
 
 p {
@@ -43,14 +96,31 @@ and (max-width: 768px) {
     }
 }
 
-@keyframes rotateY {
-  0% {
-    transform: rotate(0deg);
+/* devices with widths smaller than horizontal card spread */
+@media only screen and (max-width: 651px) {
+  .welcome-text {
+    position: absolute;
+    top: 0;
+    width: 230px;
   }
-  50% {
-    transform: rotate(45deg);
+
+  .cards.desktop {
+    display: none;
   }
-  100% {
-    transform: rotateX(45deg);
+
+  .cards.mobile {
+    display: flex;
+    width: 230px;
+    top: 72px;
+  }
+
+  .cards.spread .card-1{
+    left: 0;
+    top: 840px;
+  }
+
+  .cards.spread .card-2{
+    left: 0;
+    top: 400px;
   }
 }
