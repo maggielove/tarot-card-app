@@ -4,61 +4,61 @@
           "name": "IV of Cups",
           "arcana": "Minor",
           "suit": "Cups",
-          "description": "Lorem ipsum",
+          "description": "New invitations and opportunities are flowing to you,but for now, you’re saying “no” and turning them away. Perhaps the prospects do not interest you, or your cup is full, or you already have too much on your plate. Use your discernment to decide on what is truly important to you.",
           "image": "images/4-of-cups.png"
         },
         {
           "name": "VI of Swords",
           "arcana": "Minor",
           "suit": "Swords",
-          "description": "",
+          "description": "You are in a state of transition, leaving behind what was familiar and moving towards the unknown. The sadness over what you have lost (or released) will soon be replaced by greater mental clarity and a renewed acceptance of change. You will become a better person as a result.",
           "image": "images/6-of-swords.png"
         },
         {
           "name": "III of Cups",
           "arcana": "Minor",
           "suit": "Cups",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+          "description": "Celebration, friendship, sisterhood, and creative collaborations. Your friends and family are here to support you and lift you up to even higher levels of success. Celebrate with them and enjoy their camaraderie.",
           "image": "images/3-of-cups.png"
         },
         {
           "name": "VII of Cups",
           "arcana": "Minor",
           "suit": "Cups",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing",
+          "description": "New opportunities, choices, and at times, illusion. You have many options and opportunities from which you can choose. But be careful! You are prone to illusion and unrealistic ideals.",
           "image": "images/7-of-cups.png"
         },
         {
           "name": "Moon",
           "arcana": "Major",
-          "description": "Inner wisdom. Becoming enlightened from within.",
+          "description": "Fears and illusions and often comes out when you are projecting fear into your present and your future, based on your past experiences. Feel into situations rather than thinking what they mean.",
           "image": "images/moon.png"
         },
         {
           "name": "Strength",
           "arcana": "Major",
-          "description": "Inner wisdom. Becoming enlightened from within.",
+          "description": "Strength, determination, and power. You have great stamina and persistence, balanced with underlying patience and inner calm. You are committed to what you need to do, and you go about it in a way that shows your composure and maturity.",
           "image": "images/strength.png"
         },
         {
             "name": "The High Priestess",
             "arcana": "Major",
             "suit": null,
-            "description": "Inner wisdom. Becoming enlightened from within.",
+            "description": "Spiritual enlightenment, inner illumination, divine knowledge and wisdom. She shows up in your Tarot readings when the veil between you and the underworld is thin, and you have the opportunity to access the knowledge deep within your soul.",
             "image": "images/high-priestess.png"
         },
         {
             "name": "The Lovers",
             "arcana": "Major",
             "suit": null,
-            "description": "Union, harmony. Merging of two.",
+            "description": "Conscious connections and meaningful relationships. The arrival of this card in a Tarot reading shows that you have a beautiful, soul-honoring connection with a loved one.",
             "images": "images/lovers.png"
         },
         {
             "name": "Death",
             "arcana": "Major",
             "suit": null,
-            "description": "Change. Rebirth. An ending brings a new beginning.",
+            "description": "The end of a major phase or aspect of your life that you realize is no longer serving you, opening up the possibility of something far more valuable and essential. You need to put the past behind you and part ways, ready to embrace new possibilities.",
             "image": "images/death.png"
         }
     ]

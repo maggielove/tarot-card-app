@@ -1,53 +1,24 @@
 import '../css/Deck.css';
 import Card from './Card.js';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import TypeWriterEffect from "react-typewriter-effect";
-import * as deck from './cards.json';
+import pickSpread from "./utilities/pickCards.js";
 
-const allCards = deck;
-let cardArray;
-cardArray = allCards.cards;
-let threeCards;
+let threeCards = pickSpread();
 
-const getRandomIndex = () => {
-    // TODO fix import to use default...
-    let maxIndex = cardArray.length;
-
-    //choose a card at random
-    return Math.floor(Math.random() * maxIndex);
-}
-
-// TODO add logic to clear, reset deck
-// randomly select card content to display
-const pickACard = () => {
-    let randomIndex = getRandomIndex();
-    let chosenCard = cardArray[randomIndex];
-
-    // remove the chosenCard from the virtual deck
-    cardArray = cardArray.filter(card => card.name !== chosenCard.name);
-
-    return chosenCard;
-}
-
-const pickSpread = () => {
-  let threeCards = [];
-
-  for (let i = 0; i < 3; i++) {
-    const card = pickACard();
-    threeCards.push(card);
-  }
-
-  return threeCards;
-}
-
-threeCards = pickSpread();
-
-const Deck = ({ onRotate }) => {
+const Deck = () => {
   const [spread, setSpread] = useState(false);
+  // const [cardSpread, setCardSpread] = useState([]);
+  let cardSpread = [];
 
-  const text = { __html: `<p>Welcome. Please consider your intention for this
-    reading. When you're ready, click here to begin.</p>` };
+  // When user starts over, choose new cards
+  useEffect(() => {
+    if (!spread) {
+      // cardSpread = [];
+      getCards();
+    }
+  }, [spread]);
 
   const handleStackClick = () => {
     if (!spread) {
@@ -57,31 +28,37 @@ const Deck = ({ onRotate }) => {
 
   const handleRestartClick = () => {
     setSpread(false);
+    // setCardSpread([]);
+    // cardSpread = [];
+    getCards();
   }
 
   const desktopStackClass = classNames('cards', 'desktop', { 'spread': spread });
   const mobileStackClass = classNames('cards', 'mobile', { 'spread': spread });
   const instructionClass = classNames('welcome-text', {'spread': spread});
 
-  const cards = () => {
-    let cardSpread = [];
+  const getCards = () => {
+    const tarotCards = [];
 
     for (let i = 0; i < 3; i++) {
-      cardSpread.push(<Card key={i} id={i} data={threeCards[i]} spread={spread} />);
+      tarotCards.push(<Card key={i} id={i} data={threeCards[i]} spread={spread} />);
     }
 
+    // return setCardSpread([...tarotCards]);
+
+    cardSpread = tarotCards;
     return cardSpread;
   };
 
-  let chosenCards = cards();
-
   return (
     <div className="deck-wrapper">
+      <div className="title" dangerouslySetInnerHTML = { { __html:
+        `<h1>${`Tarot`}&nbsp;&nbsp;${`Reading`}</h1>`} } />
       <div className={desktopStackClass} onClick={handleStackClick}>
-        {chosenCards}
+        {getCards()}
       </div>
       <div className={mobileStackClass} onClick={handleStackClick}>
-        {chosenCards}
+        {getCards()}
       </div>
       <div className={instructionClass}>
         <TypeWriterEffect

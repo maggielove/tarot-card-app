@@ -9,7 +9,6 @@
   border-radius: 10px;
   position: absolute;
   left: 0;
-  /* padding: 16px; */
   perspective: 1000px;
   transition: all 0.4s cubic-bezier(.63,.15,.03,1.12);
 }
@@ -29,7 +28,6 @@
   transform: rotateZ(5deg);
 }
 
-/* Desktop */
 .card:hover {
     cursor: pointer;
 }
@@ -64,9 +62,10 @@
 }
 
 .description {
-  width: 150px;
-  height: 150px;
   display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 300px;
   align-items: center;
   opacity: 1;
   background-color: rgb(242, 242, 242, 0.95);
@@ -85,5 +84,5 @@
 .description > p {
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
-  margin-top: 8px;
+  margin-top: 0;
 }
