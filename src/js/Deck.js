@@ -53,36 +53,21 @@ const Deck = ({ onRotate }) => {
     if (!spread) {
       setSpread(true);
     }
-    console.log(`clicked stack - spread: `, spread);
   }
 
-  const handlePromptClick = () => {
-    console.log(`clicked welcome txt`);
-    // add class to animate deck
-    // could make it a promise, so that when the animation is complete, it calls onRotate
-    // or i could move all card logic to the same component, either deck or app...?
+  const handleRestartClick = () => {
+    setSpread(false);
   }
 
   const desktopStackClass = classNames('cards', 'desktop', { 'spread': spread });
   const mobileStackClass = classNames('cards', 'mobile', { 'spread': spread });
   const instructionClass = classNames('welcome-text', {'spread': spread});
 
-  // TODO change divs back to Card components
-  // pass data for card, plus card # for transition
-  // const cards = (
-  //   <>
-  //     <div className="card card-1"/>
-  //     <div className="card card-2"/>
-  //     <div className="card card-3" />
-  //   </>
-  // );
-
-  // console.log(`card?? `, pickACard());
   const cards = () => {
     let cardSpread = [];
 
     for (let i = 0; i < 3; i++) {
-      cardSpread.push(<Card key={i} id={i} data={threeCards[i]} />);
+      cardSpread.push(<Card key={i} id={i} data={threeCards[i]} spread={spread} />);
     }
 
     return cardSpread;
@@ -90,7 +75,6 @@ const Deck = ({ onRotate }) => {
 
   let chosenCards = cards();
 
-  // TODO add back mobile version
   return (
     <div className="deck-wrapper">
       <div className={desktopStackClass} onClick={handleStackClick}>
@@ -99,7 +83,7 @@ const Deck = ({ onRotate }) => {
       <div className={mobileStackClass} onClick={handleStackClick}>
         {chosenCards}
       </div>
-      <div className={instructionClass} onClick={handlePromptClick}>
+      <div className={instructionClass}>
         <TypeWriterEffect
           textStyle={{
             fontFamily: 'Roboto',
@@ -118,6 +102,10 @@ const Deck = ({ onRotate }) => {
           typeSpeed={100}
         />
       </div>
+      {spread &&
+        <div className="restart-text"
+          dangerouslySetInnerHTML = { { __html: `<p>${"start over"}</p>`} } onClick={handleRestartClick}  />
+      }
     </div>
   )
 }

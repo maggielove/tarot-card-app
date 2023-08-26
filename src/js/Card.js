@@ -15,15 +15,17 @@ export default class Card extends React.Component {
             descriptionHidden: true
         }
     }
-    
+
     //TODO change this.state logic to useState
     // TODO update to get rid of extra bg card
     handleClick() {
       console.log('clicked card');
 
+      if (this.props.spread) {
         this.setState({
             flipped: true
         });
+      }
     }
 
     handleMouseEnter() {
@@ -37,7 +39,6 @@ export default class Card extends React.Component {
     render() {
         // TODO add back spread
         const { data, id } = this.props;
-        console.log(`id - ${id} `, `data - ${JSON.stringify(data)}`);
         const cardClass = classNames('card', `card-${id}`,
           { 'flipped': this.state.flipped });
         const cardInfoClass = classNames('description', {

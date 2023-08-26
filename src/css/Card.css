@@ -11,9 +11,22 @@
   left: 0;
   /* padding: 16px; */
   perspective: 1000px;
-  background-size: cover;
-  background-image: url("../images/card-top-view.png");
   transition: all 0.4s cubic-bezier(.63,.15,.03,1.12);
+}
+
+.card-1 {
+  z-index: 3;
+  transform: rotateZ(-2deg);
+}
+
+.card-2 {
+  z-index: 2;
+  transform: rotateZ(-7deg);
+}
+
+.card-3 {
+  z-index: 1;
+  transform: rotateZ(5deg);
 }
 
 /* Desktop */
@@ -22,7 +35,6 @@
 }
 
 .card-front, .card-back {
-    border: 1px solid green;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -30,15 +42,9 @@
 }
 
 .card-back {
-    /* background-color: pink; */
-    border: 2px solid pink;
     transform: rotateY(180deg);
     z-index: 0;
 }
-
-/* .card:nth-child(2) {
-    margin: 0 50px;
-} */
 
 .card-inner {
     position: relative;
@@ -47,7 +53,6 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    border: 1px solid red;
 }
 
 .card.flipped .card-inner {
@@ -59,12 +64,15 @@
 }
 
 .description {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
   opacity: 1;
   background-color: rgb(242, 242, 242, 0.95);
   position: absolute;
   z-index: 1;
   padding: 8px;
-  width: 150px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotateY(180deg);
@@ -78,12 +86,4 @@
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   margin-top: 8px;
-}
-
-/* tablet and below */
-@media only screen
-and (max-width: 768px) {
-  .card:nth-child(2) {
-      /* margin: 24px 0; */
-  }
 }
