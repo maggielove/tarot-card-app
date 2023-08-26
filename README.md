@@ -1,5 +1,5 @@
 # Tarot Reading
-![tarot-reading-recording-short-large](https://github.com/maggielove/tarot-card-app/assets/14114500/bfb05b77-9962-4f26-932f-12d8a1fb32a3)
+![tarot app demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHl6dDVoNjJ0MTB0aHFrc29qZjlib2UxMG9sbHgyN3BvMnp5a2J1cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cFrGkY6lDzpWhIKUZS/giphy.gif)
 
 *Low-res GIF demo :)*
 
