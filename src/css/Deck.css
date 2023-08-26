@@ -19,35 +19,6 @@
   display: none;
 }
 
-/* .card {
-  display: flex;
-  background-color: transparent;
-  height: 370px;
-  width: 200px;
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-  perspective: 1000px;
-  background-size: cover;
-  background-image: url("../images/card-top-view.png");
-  transition: all 0.4s cubic-bezier(.63,.15,.03,1.12);
-} */
-
-.card-1 {
-  z-index: 3;
-  transform: rotateZ(-2deg);
-}
-
-.card-2 {
-  z-index: 2;
-  transform: rotateZ(-7deg);
-}
-
-.card-3 {
-  z-index: 1;
-  transform: rotateZ(5deg);
-}
-
 /* TODO change to SCSS, nest */
 /* Animation based on https://codepen.io/chrishutchinson/pen/qBrBjG */
 .cards.spread .card {

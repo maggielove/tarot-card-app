@@ -3,6 +3,45 @@ import Card from './Card.js';
 import { useState } from 'react';
 import classNames from 'classnames';
 import TypeWriterEffect from "react-typewriter-effect";
+import * as deck from './cards.json';
+
+const allCards = deck;
+let cardArray;
+cardArray = allCards.cards;
+let threeCards;
+
+const getRandomIndex = () => {
+    // TODO fix import to use default...
+    let maxIndex = cardArray.length;
+
+    //choose a card at random
+    return Math.floor(Math.random() * maxIndex);
+}
+
+// TODO add logic to clear, reset deck
+// randomly select card content to display
+const pickACard = () => {
+    let randomIndex = getRandomIndex();
+    let chosenCard = cardArray[randomIndex];
+
+    // remove the chosenCard from the virtual deck
+    cardArray = cardArray.filter(card => card.name !== chosenCard.name);
+
+    return chosenCard;
+}
+
+const pickSpread = () => {
+  let threeCards = [];
+
+  for (let i = 0; i < 3; i++) {
+    const card = pickACard();
+    threeCards.push(card);
+  }
+
+  return threeCards;
+}
+
+threeCards = pickSpread();
 
 const Deck = ({ onRotate }) => {
   const [spread, setSpread] = useState(false);
@@ -11,7 +50,10 @@ const Deck = ({ onRotate }) => {
     reading. When you're ready, click here to begin.</p>` };
 
   const handleStackClick = () => {
-    setSpread(true);
+    if (!spread) {
+      setSpread(true);
+    }
+    console.log(`clicked stack - spread: `, spread);
   }
 
   const handlePromptClick = () => {
@@ -27,21 +69,35 @@ const Deck = ({ onRotate }) => {
 
   // TODO change divs back to Card components
   // pass data for card, plus card # for transition
-  const cards = (
-    <>
-      <div className="card card-1"/>
-      <div className="card card-2"/>
-      <div className="card card-3" />
-    </>
-  );
+  // const cards = (
+  //   <>
+  //     <div className="card card-1"/>
+  //     <div className="card card-2"/>
+  //     <div className="card card-3" />
+  //   </>
+  // );
 
+  // console.log(`card?? `, pickACard());
+  const cards = () => {
+    let cardSpread = [];
+
+    for (let i = 0; i < 3; i++) {
+      cardSpread.push(<Card key={i} id={i} data={threeCards[i]} />);
+    }
+
+    return cardSpread;
+  };
+
+  let chosenCards = cards();
+
+  // TODO add back mobile version
   return (
     <div className="deck-wrapper">
       <div className={desktopStackClass} onClick={handleStackClick}>
-        {cards}
+        {chosenCards}
       </div>
       <div className={mobileStackClass} onClick={handleStackClick}>
-        {cards}
+        {chosenCards}
       </div>
       <div className={instructionClass} onClick={handlePromptClick}>
         <TypeWriterEffect

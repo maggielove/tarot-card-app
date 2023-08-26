@@ -15,7 +15,9 @@ export default class Card extends React.Component {
             descriptionHidden: true
         }
     }
+    
     //TODO change this.state logic to useState
+    // TODO update to get rid of extra bg card
     handleClick() {
       console.log('clicked card');
 
@@ -33,8 +35,11 @@ export default class Card extends React.Component {
     }
 
     render() {
-        const { data } = this.props;
-        const cardClass = classNames('card', { 'flipped': this.state.flipped });
+        // TODO add back spread
+        const { data, id } = this.props;
+        console.log(`id - ${id} `, `data - ${JSON.stringify(data)}`);
+        const cardClass = classNames('card', `card-${id}`,
+          { 'flipped': this.state.flipped });
         const cardInfoClass = classNames('description', {
           'hidden': this.state.descriptionHidden });
         const description = { __html: `<p>${data.description}</p>` };

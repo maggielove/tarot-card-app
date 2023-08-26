@@ -22,19 +22,16 @@
 }
 
 .card-front, .card-back {
+    border: 1px solid green;
     position: absolute;
-    /* padding: 16px; */
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
 }
 
-.card-front {
-    /* background-color: darkslategray; */
-}
-
 .card-back {
-    /* background-color: white; */
+    /* background-color: pink; */
+    border: 2px solid pink;
     transform: rotateY(180deg);
     z-index: 0;
 }
@@ -47,10 +44,10 @@
     position: relative;
     width: 100%;
     height: 100%;
-    /* padding: 15px; */
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    border: 1px solid red;
 }
 
 .card.flipped .card-inner {
@@ -87,6 +84,6 @@
 @media only screen
 and (max-width: 768px) {
   .card:nth-child(2) {
-      margin: 24px 0;
+      /* margin: 24px 0; */
   }
 }
