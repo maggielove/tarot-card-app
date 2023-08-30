@@ -52,7 +52,7 @@
             "arcana": "Major",
             "suit": null,
             "description": "Conscious connections and meaningful relationships. The arrival of this card in a Tarot reading shows that you have a beautiful, soul-honoring connection with a loved one.",
-            "images": "images/lovers.png"
+            "image": "images/lovers.png"
         },
         {
             "name": "Death",

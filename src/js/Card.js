@@ -47,11 +47,15 @@ const Card = ({ data, id, spread }) => {
       case 2:
         time = "Present";
         break;
+      default:
+        time = "";
     }
 
     // card descriptions from https://www.biddytarot.com/
     const description = { __html: `<h2>${time}</h2> \n
         <p>${data.description}</p>` };
+
+
 
     return (
         <div className={cardClass} onClick={handleClick}>
