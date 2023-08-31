@@ -1,25 +1,23 @@
 import * as deck from '../cards.json';
+import reject from "lodash/reject";
 
 const allCards = deck;
-let cardArray;
-cardArray = allCards.cards;
+let cardArray = allCards.cards;
 
-const getRandomIndex = () => {
-    // TODO fix import to use default...
-    let maxIndex = cardArray.length;
+const getRandomIndex = (array) => {
+    let maxIndex = array.length;
 
     //choose a card at random
     return Math.floor(Math.random() * maxIndex);
 }
 
-// TODO add logic to clear, reset deck
 // randomly select card content to display
 const pickACard = () => {
-    let randomIndex = getRandomIndex();
+    let randomIndex = getRandomIndex(cardArray);
     let chosenCard = cardArray[randomIndex];
 
     // remove the chosenCard from the virtual deck
-    cardArray = cardArray.filter(card => card.name !== chosenCard.name);
+    cardArray = reject(cardArray, chosenCard);
 
     return chosenCard;
 }
@@ -32,7 +30,11 @@ const pickSpread = () => {
     threeCards.push(card);
   }
 
-  return threeCards;
+  cardArray = allCards.cards; // reset the deck for when user starts over
+
+  return new Promise((resolve) => {
+    resolve(threeCards);
+  });
 }
 
 export default pickSpread;

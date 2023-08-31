@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import '../css/Card.css';
 
-// TODO choose clear... card...
 const Card = ({ data, id, spread }) => {
     const [flipped, setFlipped] = useState(false);
     const [descriptionHidden, setDescriptionHidden] = useState(true);
@@ -16,8 +15,6 @@ const Card = ({ data, id, spread }) => {
     }, [spread]);
 
     const handleClick = () => {
-      console.log('clicked card');
-
       if (spread) {
         setFlipped(true);
       }
@@ -55,8 +52,6 @@ const Card = ({ data, id, spread }) => {
     const description = { __html: `<h2>${time}</h2> \n
         <p>${data.description}</p>` };
 
-
-
     return (
         <div className={cardClass} onClick={handleClick}>
             <div className='card-inner'>
@@ -72,7 +67,7 @@ const Card = ({ data, id, spread }) => {
                     }
                 </div>
                 <div className={cardInfoClass}
-                  dangerouslySetInnerHTML={description} />
+                   dangerouslySetInnerHTML={description} />
             </div>
         </div>
     );
