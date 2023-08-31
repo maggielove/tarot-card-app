@@ -1,9 +1,9 @@
-import '../css/Deck.css';
+import '../../css/Deck.css';
 import Card from './Card.js';
 import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import TypeWriterEffect from "react-typewriter-effect";
-import pickSpread from "./utilities/pickCards";
+import pickSpread from "../utilities/pickCards";
 
 const Deck = () => {
   const [spread, setSpread] = useState(false);

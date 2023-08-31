@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import classNames from 'classnames';
-import '../css/Card.css';
+import '../../css/Card.css';
 
 const Card = ({ data, id, spread }) => {
     const [flipped, setFlipped] = useState(false);
@@ -56,13 +56,13 @@ const Card = ({ data, id, spread }) => {
         <div className={cardClass} onClick={handleClick}>
             <div className='card-inner'>
                 <div className='card-front'>
-                  <img src={require('../images/card-top-view.png')}
+                  <img src={require('../../images/card-top-view.png')}
                 alt={data.name} height={362} width={200} />
                 </div>
                 <div className='card-back' onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}>
                     {data &&
-                      <img src={require(`../${data.image}`)}
+                      <img src={require(`../../${data.image}`)}
                       alt={data.name} height={362} width={200} />
                     }
                 </div>
