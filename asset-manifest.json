@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/tarot-card-app/static/css/main.4f402ea5.css",
+    "main.js": "/tarot-card-app/static/js/main.b4a18f0a.js",
+    "static/js/453.210e45d6.chunk.js": "/tarot-card-app/static/js/453.210e45d6.chunk.js",
+    "static/media/card-top-view.png": "/tarot-card-app/static/media/card-top-view.f4aac5a1f3b2ef2d02aa.png",
+    "static/media/deck-top-view.png": "/tarot-card-app/static/media/deck-top-view.b4f49189b6f8e7155304.png",
+    "static/media/lovers.png": "/tarot-card-app/static/media/lovers.78fc32a2d4d88dcc9790.png",
+    "static/media/death.png": "/tarot-card-app/static/media/death.e486fdc16690af85f929.png",
+    "static/media/4-of-cups.png": "/tarot-card-app/static/media/4-of-cups.edb6871623b55969bb09.png",
+    "static/media/high-priestess.png": "/tarot-card-app/static/media/high-priestess.db1ccd08ee276a1d364a.png",
+    "static/media/7-of-cups.png": "/tarot-card-app/static/media/7-of-cups.1c412e48c1969dd8511d.png",
+    "static/media/3-of-cups.png": "/tarot-card-app/static/media/3-of-cups.644563e06fd519dc62a2.png",
+    "static/media/wheel-of-fortune-resized.png": "/tarot-card-app/static/media/wheel-of-fortune-resized.559718e83d18d25546fe.png",
+    "static/media/moon.png": "/tarot-card-app/static/media/moon.e7aa43876205d4c133d1.png",
+    "static/media/strength.png": "/tarot-card-app/static/media/strength.39fbddeec14936cb67c6.png",
+    "static/media/6-of-swords.png": "/tarot-card-app/static/media/6-of-swords.653fd1c91bfeb8b07932.png",
+    "static/media/deck-sideways.png": "/tarot-card-app/static/media/deck-sideways.19ed9072de19dc901e24.png",
+    "static/media/index.cjs": "/tarot-card-app/static/media/index.671993152dc0f6e0b17a.cjs",
+    "index.html": "/tarot-card-app/index.html",
+    "main.4f402ea5.css.map": "/tarot-card-app/static/css/main.4f402ea5.css.map",
+    "main.b4a18f0a.js.map": "/tarot-card-app/static/js/main.b4a18f0a.js.map",
+    "453.210e45d6.chunk.js.map": "/tarot-card-app/static/js/453.210e45d6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f402ea5.css",
+    "static/js/main.b4a18f0a.js"
+  ]
+}
